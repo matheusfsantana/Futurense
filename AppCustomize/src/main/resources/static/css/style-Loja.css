@@ -15,6 +15,7 @@ a:active {
     color: inherit;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 /* cabeçalho */
@@ -84,10 +85,11 @@ a:active {
     align-items: center;
     flex-direction: column;
     width: 400px;
-    height: auto;
+    height: 350px;
     position: relative;
     border-radius: 2px;
     background-color: #313131;
+    border: 1px solid #fff;
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
     text-align: center;
     margin: 20px;
@@ -135,7 +137,11 @@ a:active {
 
 /*SHAPES*/
 
-
+p{
+    width: auto;
+    height: auto;
+    text-align: center;
+}
 
 #square
 {
@@ -143,70 +149,108 @@ a:active {
     height: 150px;
     background: #fff;
     color:black;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 36px;
+    border: 2px solid black;
 }
+
+
 #rectangle {
-    width: 250px;
-    height: 150px;
+    width: 200px;
+    height: 100px;
     background: #fff;
+    color:black;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 30px;
+    border: 2px solid black;
+}
+
+#rectangleHorizontal{
+    width: 100px;
+    height: 200px;
+    background: #fff;
+    color:black;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 30px;
+    border: 2px solid black;
 }
 
 #circle {
     width: 150px;
     height: 150px;
     background: #fff;
-    border-radius: 50%
+    border-radius: 50%;
+    color:black;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 36px;
+    border: 2px solid black;
 }
 
-#octagon {
-    width: 100px;
-    height: 100px;
-    background: red;
+#octagonWrap {
+    width:150px;
+    height:150px;
+    float: left;
     position: relative;
+    overflow: hidden;
 }
-
+#octagon {
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    overflow: hidden;
+    transform: rotate(45deg);
+    background: #fff;
+    border: 2px solid black;
+}
 #octagon:before {
-    content: "";
-    width: 100px;
-    height: 0;
     position: absolute;
-    top: 0;
-    left: 0;
-    border-bottom: 29px solid red;
-    border-left: 29px solid #eee;
-    border-right: 29px solid #eee;
+    /* There needs to be a negative value here to cancel
+     * out the width of the border. It's currently -3px,
+     * but if the border were 5px, then it'd be -5px.
+     */
+    top: -3px; right: -3px; bottom: -3px; left: -3px;
+    transform: rotate(45deg);
+    content: '';
+    border: inherit;
+    
 }
-
-#octagon:after {
-    content: "";
-    width: 100px;
-    height: 0;
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    border-top: 29px solid red;
-    border-left: 29px solid #eee;
-    border-right: 29px solid #eee;
+#octagon p{
+    color: black;
+    align-items: left;
+    text-align: center;
+    justify-content: left;
+    font-size: 34px;
+    transform: rotate(-45deg);
+    margin-right: 15px;
 }
 
 #diamond {
-    width: 0;
-    height: 0;
-    border: 100px solid transparent;
-    border-bottom-color: #fff;
-    position: relative;
-    top: -100px;
+    width: 140px;
+    height: 140px;
+    background-color: #fff;
+    transform: rotate(-45deg);
+    color: black;
+    border: 2px solid black;
+    
+}
+#diamond p{
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    font-size: 34px;
+    transform: rotate(45deg);
+    width: auto;
+    height: auto;
 }
 
-#diamond:after {
-    content: '';
-    position: absolute;
-    left: -100px;
-    top: 100px;
-    width: 0;
-    height: 0;
-    border: 100px solid transparent;
-    border-top-color: #fff  ;
-}
+
 
 
 /* Rodapé */
