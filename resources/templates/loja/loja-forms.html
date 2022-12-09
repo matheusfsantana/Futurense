@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/Icon.svg" type="image/svg">
+    <title>Futurense - Idealizando o futuro </title>
+    <link rel="stylesheet" href="css/style-Forms.css">
+</head>
+
+<body>
+    <!-- cabeçalho --> 
+    <th:block th:include="header"></th:block>
+
+    <!-- Corpo --> 
+    <main id="content">
+       <section class="menu-showblack">
+            <P>Loja</P>
+        </section>
+
+        <section class="menu-body">
+            <form>
+                <div class="title">
+                    <h2>SOLICITAÇÃO</h2>
+                  </div>
+                <div class="input-group">
+                    <label for="CORTEXTO">Texto da placa:</label>
+                    <br>
+                    <input type="text" id="PLACA" required>
+                </div>
+                <div class="input-group">
+                    <label for="CORTEXTO">Cor do texto:</label>
+                    <br>
+                    <select id="CORTEXTO" name="Cor do texto">
+                    <option value="Preto">Preto</option>
+                    <option value="Branco">Branco</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="CORPlaca">Cor da Placa:</label>
+                    <br>
+                    <select id="COR" name="Cor da Placa">
+                    <option value="Preto">Preto</option>
+                    <option value="Branco">Branco</option>
+                    <option value="Azul">Azul</option>
+                    <option value="Vermelho">Vermelho</option>
+                    <option value="Verde">Verde</option>
+                    <option value="Amarelo">Amarelo</option>
+                    <option value="Roxo">Roxo</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="TAMANHO">Tamanho da Placa:</label>
+                    <br>
+                    <select id="TAMANHO" name="Tamanho da Placa:">
+                    <option value="18″ x 18″">18″ x 18″</option>
+                    <option value="24″ x 24″">24″ x 24″</option>
+                    <option value="30″ x 30″">30″ x 30″</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <div class="input-group">
+                        <label for="Pedidos">Pedidos/Notas:</label>
+                        <br>
+                    <textarea id="Pedidos" rows="8" required></textarea>
+                </div>
+                <div class="input-group">
+                    <div class="input-group">
+                        <div class="input-group">
+                            <label for="Quantidade">Quantidade:</label>
+                            <br>
+                        <input type="number" id="number" step="1" min="1" max="" value="1">
+                </div>
+
+                <input type="submit" value = "ENVIAR">
+                &nbsp;&nbsp;
+                <input type="reset" value = "LIMPAR">
+              </div>
+            </form>
+        </section>
+    </main>
+
+    <!-- Rodapé --> 
+    <th:block th:include="footer"></th:block>
+</body>
+
+</html>
