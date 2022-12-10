@@ -6,10 +6,42 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class FormsController {
 	
-	@RequestMapping("/placa-circular")
+	@RequestMapping("/forms/placa-circular")
 	public String placaCircular()
 	{
-		return "loja/lojaForms";
+		return "loja/placaCircular";
 	}
+	
+	@RequestMapping("/forms/placa-quadrada")
+	public String placaQuadrada()
+	{
+		return "loja/placa-quadrada";
+	}
+	
+	@RequestMapping("/forms/placa-diamante")
+	public String placaDiamante()
+	{
+		return "loja/placa-diamante";
+	}
+	
+	@RequestMapping("/forms/placa-octagona")
+	public String placaOctagona()
+	{
+		return "loja/placa-octagona";
+	}
+	
+	@RequestMapping("/forms/placa-retangular")
+	public String placaRetangular()
+	{
+		return "loja/placa-retangular";
+	}
+	
+	@RequestMapping("/forms/placa-retangular-horizontal")
+	public String placaRetangularH()
+	{
+		return "loja/placa-retangular-horizontal";
+	}
+	
+	
 
 }
