@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html xmlns:th="http://thymeleaf.org" xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="img/Icon.svg" type="image/svg">
+    <title>Futurense - Idealizando o futuro </title>
+    <link rel="stylesheet" href="css/style-Forms.css">
+</head>
+
+<body>
+    <!-- cabeçalho -->
+    <th:block th:include="header"></th:block>
+
+    <!-- Corpo -->
+    <main id="content">
+        <section class="menu-showblack">
+            <P>Loja</P>
+        </section>
+
+        <section class="menu-body">
+            <form>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-4 center">
+                            <div id="circle">
+                                <p>Seu texto aqui</p>
+                            </div>
+                        </div>
+
+                        <div class="col-md-8">
+
+                            <div class="title">
+                                <h2>SOLICITAÇÃO</h2>
+                            </div>
+                            <div class="input-group">
+                                <label for="textoPlaca">Texto da placa:</label>
+                                <br>
+                                <input type="text" id="textoPlaca" required>
+                            </div>
+                            <div class="input-group">
+                                <label for="corTexto">Cor do texto:</label>
+                                <br>
+                                <select id="corTexto" name="corTexto">
+                                    <option value="black">Preto</option>
+                                    <option value="white">Branco</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label for="corPlaca">Cor da Placa:</label>
+                                <br>
+                                <select id="corPlaca" name="CorPlaca">
+                                    <option value="black">Preto</option>
+                                    <option value="white">Branco</option>
+                                    <option value="blue">Azul</option>
+                                    <option value="red">Vermelho</option>
+                                    <option value="green">Verde</option>
+                                    <option value="yellow">Amarelo</option>
+                                    <option value="purple">Roxo</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <label for="TAMANHO">Tamanho da Placa:</label>
+                                <br>
+                                <select id="TAMANHO" name="Tamanho da Placa:">
+                                    <option value="18″ x 18″">18″ x 18″</option>
+                                    <option value="24″ x 24″">24″ x 24″</option>
+                                    <option value="30″ x 30″">30″ x 30″</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <div class="input-group">
+                                    <label for="Pedidos">Pedidos/Notas:</label>
+                                    <br>
+                                    <textarea id="Pedidos" rows="8" required></textarea>
+                                </div>
+                                <div class="input-group">
+                                    <div class="input-group">
+                                        <div class="input-group">
+                                            <label for="Quantidade">Quantidade:</label>
+                                            <br>
+                                            <input type="number" id="number" step="1" min="1" max="" value="1">
+                                        </div>
+
+                                        <input type="submit" value="ENVIAR">
+                                        &nbsp;&nbsp;
+                                        <input id= "reset" type="reset" value="LIMPAR">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+
+            <script src="js/lojaScript.js"></script>
+        </section>
+    </main>
+
+    <!-- Rodapé -->
+    <th:block th:include="footer"></th:block>
+</body>
+
+</html>
