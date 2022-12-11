@@ -289,6 +289,21 @@
     width: 250px;
 }
 
+.card .placa {
+    margin-left: 45px;
+    margin-bottom: 15px;
+}
+
+
+.card02 .placa {
+    margin-left: 45px;
+    margin-bottom: 15px;
+}
+
+.card03 .placa {
+    margin-left: 45px;
+    margin-bottom: 15px;
+}
 
 .content {
     height: 215px;

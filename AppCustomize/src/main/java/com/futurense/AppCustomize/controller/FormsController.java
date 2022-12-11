@@ -42,6 +42,11 @@ public class FormsController {
 		return "loja/placa-retangular-horizontal";
 	}
 	
+	@RequestMapping("/obrigado")
+	public String obrigado()
+	{
+		return "obrigado";
+	}
 	
 
 }
